@@ -95,6 +95,9 @@ export default function JurosCompostos() {
       labels: resultado.labels,
       datasets,
     });
+
+    console.log(datasets);
+    console.log(dados);
   };
 
   return (
@@ -111,6 +114,7 @@ export default function JurosCompostos() {
           <Input
             id="principal"
             type="number"
+            min="1"
             value={capitalInicial}
             onChange={(e) => setCapitalInicial(e.target.value)}
           />
@@ -144,6 +148,8 @@ export default function JurosCompostos() {
           <Input
             id="tempo"
             type="number"
+            minLength={1}
+            min={1}
             value={tempo}
             onChange={(e) => setTempo(e.target.value)}
           />
@@ -184,6 +190,7 @@ export default function JurosCompostos() {
             id="valorMensal"
             type="number"
             value={valorMensal}
+            min={1}
             onChange={(e) => setValorMensal(e.target.value)}
             disabled={adicionarMensal === "Não"}
           />

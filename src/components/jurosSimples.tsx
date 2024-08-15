@@ -91,6 +91,9 @@ export default function JurosSimples() {
       labels: resultado.labels,
       datasets,
     });
+
+    console.log(datasets);
+    console.log(dados);
   };
 
   return (
@@ -107,6 +110,7 @@ export default function JurosSimples() {
           <Input
             id="principal"
             type="number"
+            min={1}
             value={principal}
             onChange={(e) => setPrincipal(e.target.value)}
           />
@@ -140,6 +144,7 @@ export default function JurosSimples() {
           <Input
             id="tempo"
             type="number"
+            min={1}
             value={tempo}
             onChange={(e) => setTempo(e.target.value)}
           />
