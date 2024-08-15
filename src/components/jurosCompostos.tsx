@@ -78,13 +78,13 @@ export default function JurosCompostos() {
 
     const datasets = [
       {
-        label: "Juros Compostos",
+        label: "Valor final",
         data: resultado.pontosDados,
         borderColor: "rgba(75, 192, 192, 1)",
         backgroundColor: "rgba(75, 192, 192, 0.2)",
       },
       {
-        label: "Total Investido",
+        label: "Investimento total",
         data: resultado.pontosInvestimento,
         borderColor: "rgba(255, 99, 132, 1)",
         backgroundColor: "rgba(255, 99, 132, 0.2)",

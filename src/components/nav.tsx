@@ -1,3 +1,4 @@
+import { ThemeChanger } from "./themeChanger";
 import { Button } from "./ui/button";
 
 interface NavProps {
@@ -12,25 +13,20 @@ export default function Nav({ setView, currentView }: NavProps) {
     }`;
 
   return (
-    <nav className="bg-gray-800 p-4">
-      <ul className="flex space-x-4">
-        <li>
-          <Button
-            onClick={() => setView("compostos")}
-            className={getButtonClass("compostos")}
-          >
-            Juros Compostos
-          </Button>
-        </li>
-        <li>
-          <Button
-            onClick={() => setView("simples")}
-            className={getButtonClass("simples")}
-          >
-            Juros Simples
-          </Button>
-        </li>
-      </ul>
+    <nav className="bg-gray-800 p-4 flex justify-between items-center">
+      <div>
+        <ul className="flex space-x-4">
+          <li>
+            <Button onClick={() => setView("compostos")}>
+              Juros Compostos
+            </Button>
+          </li>
+          <li>
+            <Button onClick={() => setView("simples")}>Juros Simples</Button>
+          </li>
+        </ul>
+      </div>
+      <ThemeChanger />
     </nav>
   );
 }

@@ -5,7 +5,7 @@ import Nav from "@/components/nav";
 import { useState } from "react";
 
 export default function Home() {
-  const [view, setView] = useState("home");
+  const [view, setView] = useState("compostos");
 
   const renderView = () => {
     switch (view) {
