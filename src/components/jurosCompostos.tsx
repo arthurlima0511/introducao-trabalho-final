@@ -138,13 +138,13 @@ export default function JurosCompostos() {
 
   return (
     <>
-      <div className="flex justify-around items-center min-h-[80vh] gap-16">
+      <div className="flex flex-col md:flex-row justify-around items-center min-h-[80vh] gap-4 md:gap-16">
         <form
           onSubmit={(e) => {
             e.preventDefault();
             handleCalcular();
           }}
-          className="flex flex-col gap-4 w-1/3 min-h-[60vh]"
+          className="flex flex-col gap-4 w-full md:w-1/3 min-h-[60vh]"
         >
           <div className="w-full">
             <Label htmlFor="principal">Valor inicial: </Label>
@@ -157,8 +157,8 @@ export default function JurosCompostos() {
             />
           </div>
 
-          <div className="flex gap-4">
-            <div className="w-2/3">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="w-full md:w-2/3">
               <Label htmlFor="taxa">Taxa de juros: </Label>
               <Input
                 id="taxa"
@@ -167,7 +167,7 @@ export default function JurosCompostos() {
                 onChange={(e) => setTaxa(e.target.value)}
               />
             </div>
-            <div className="w-1/3">
+            <div className="w-full md:w-1/3">
               <Label htmlFor="tipoTaxa">Tipo de taxa: </Label>
               <Select
                 value={tipoTaxa}
@@ -184,8 +184,8 @@ export default function JurosCompostos() {
             </div>
           </div>
 
-          <div className="flex gap-4">
-            <div className="w-2/3">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="w-full md:w-2/3">
               <Label htmlFor="tempo">Tempo: </Label>
               <Input
                 id="tempo"
@@ -196,7 +196,7 @@ export default function JurosCompostos() {
                 onChange={(e) => setTempo(e.target.value)}
               />
             </div>
-            <div className="w-1/3">
+            <div className="w-full md:w-1/3">
               <Label htmlFor="periodoTempo">Período de tempo: </Label>
               <Select
                 value={periodoTempo}
@@ -213,8 +213,8 @@ export default function JurosCompostos() {
             </div>
           </div>
 
-          <div className="flex gap-4">
-            <div className="w-2/3">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="w-full md:w-2/3">
               <Label htmlFor="valorMensal">Valor mensal: </Label>
               <Input
                 id="valorMensal"
@@ -225,7 +225,7 @@ export default function JurosCompostos() {
                 disabled={adicionarMensal === "Não"}
               />
             </div>
-            <div className="w-1/3">
+            <div className="w-full md:w-1/3">
               <Label htmlFor="adicionarMensal">Adicionar valor mensal?</Label>
               <Select
                 value={adicionarMensal}
@@ -277,7 +277,7 @@ export default function JurosCompostos() {
           </div>
         </form>
 
-        <div className="w-2/4 h-[60vh]">
+        <div className="w-full md:w-2/4 h-[60vh]">
           <Line data={dados} options={options} />
         </div>
       </div>

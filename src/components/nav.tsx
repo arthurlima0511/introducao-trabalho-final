@@ -7,20 +7,33 @@ interface NavProps {
 
 export default function Nav({ setView }: NavProps) {
   return (
-    <nav className="p-4 px-[5rem] flex justify-between items-center">
-      <div>
-        <ul className="flex space-x-4">
+    <nav className="p-4 md:px-[5rem] flex flex-col md:flex-row justify-between items-center">
+      <div className="w-full md:w-auto flex flex-row justify-between items-center md:justify-start">
+        <ul className="flex flex-row space-x-2 md:space-x-4">
           <li>
-            <Button onClick={() => setView("compostos")}>
+            <Button
+              className="text-sm md:text-base"
+              onClick={() => setView("compostos")}
+            >
               Juros Compostos
             </Button>
           </li>
           <li>
-            <Button onClick={() => setView("simples")}>Juros Simples</Button>
+            <Button
+              className="text-sm md:text-base"
+              onClick={() => setView("simples")}
+            >
+              Juros Simples
+            </Button>
           </li>
         </ul>
+        <div className="ml-auto md:hidden">
+          <ThemeChanger />
+        </div>
       </div>
-      <ThemeChanger />
+      <div className="hidden md:block">
+        <ThemeChanger />
+      </div>
     </nav>
   );
 }
