@@ -143,7 +143,7 @@ export default function JurosSimples() {
           className="flex flex-col gap-4 w-1/3 min-h-[60vh]"
         >
           <div className="w-full">
-            <Label htmlFor="principal">Principal Inicial: </Label>
+            <Label htmlFor="principal">Valor inicial: </Label>
             <Input
               id="principal"
               type="number"
@@ -155,7 +155,7 @@ export default function JurosSimples() {
 
           <div className="flex gap-4">
             <div className="w-2/3">
-              <Label htmlFor="taxa">Taxa de Juros: </Label>
+              <Label htmlFor="taxa">Taxa de juros: </Label>
               <Input
                 id="taxa"
                 type="number"
@@ -164,7 +164,7 @@ export default function JurosSimples() {
               />
             </div>
             <div className="w-1/3">
-              <Label htmlFor="tipoTaxa">Tipo de Taxa: </Label>
+              <Label htmlFor="tipoTaxa">Tipo de taxa: </Label>
               <Select
                 value={tipoTaxa}
                 onValueChange={(value) => setTipoTaxa(value)}
@@ -192,7 +192,7 @@ export default function JurosSimples() {
               />
             </div>
             <div className="w-1/3">
-              <Label htmlFor="periodoTempo">Período de Tempo: </Label>
+              <Label htmlFor="periodoTempo">Período de tempo: </Label>
               <Select
                 value={periodoTempo}
                 onValueChange={(value) => setPeriodoTempo(value)}
