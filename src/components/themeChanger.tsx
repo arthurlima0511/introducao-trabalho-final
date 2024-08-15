@@ -13,7 +13,7 @@ export const ThemeChanger = () => {
 
   return (
     <div onClick={handleToggle}>
-      {toggle ? <Moon /> : <Sun color="white" />}
+      {toggle ? <Moon /> : <Sun color="black" />}
     </div>
   );
 };

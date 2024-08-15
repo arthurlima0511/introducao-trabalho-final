@@ -3,17 +3,11 @@ import { Button } from "./ui/button";
 
 interface NavProps {
   setView: (view: string) => void;
-  currentView: string;
 }
 
-export default function Nav({ setView, currentView }: NavProps) {
-  const getButtonClass = (view: string) =>
-    `text-white hover:text-gray-400 ${
-      currentView === view ? "font-bold underline" : ""
-    }`;
-
+export default function Nav({ setView }: NavProps) {
   return (
-    <nav className="bg-gray-800 p-4 flex justify-between items-center">
+    <nav className="p-4 px-[5rem] flex justify-between items-center">
       <div>
         <ul className="flex space-x-4">
           <li>

@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <>
-      <Nav setView={setView} currentView={view} />
+      <Nav setView={setView} />
       <div className="p-4">{renderView()}</div>
     </>
   );
