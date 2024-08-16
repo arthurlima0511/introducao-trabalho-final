@@ -250,20 +250,18 @@ export default function JurosCompostos() {
 
           <div className="flex flex-col gap-6 justify-start items-start">
             {valorFinalTotal === "0" ? (
-              <p className="text-xl font-bold">Valor total: R$ 00,00</p>
+              <p className="text-xl font-bold text-green-500">
+                Valor total: R$ 00,00
+              </p>
             ) : (
-              <p className="text-xl font-bold">
+              <p className="text-xl font-bold text-green-500">
                 Valor total: R$ {valorFinalTotal}
               </p>
             )}
             {lucroTotal === "0" ? (
-              <p className="text-xl font-bold text-green-500">
-                Lucro total: R$ 00,00
-              </p>
+              <p className="text-xl font-bold">Lucro total: R$ 00,00</p>
             ) : (
-              <p className="text-xl font-bold text-green-500">
-                Lucro total: R$ {lucroTotal}
-              </p>
+              <p className="text-xl font-bold">Lucro total: R$ {lucroTotal}</p>
             )}
             {totalInvestido === "0" ? (
               <p className="text-xl font-bold text-red-600">
