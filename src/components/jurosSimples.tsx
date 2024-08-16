@@ -134,13 +134,13 @@ export default function JurosSimples() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-around items-center min-h-[80vh] gap-4 md:gap-16">
+      <div className="flex flex-col lg:flex-row justify-around items-center min-h-[80vh] gap-4 lg:gap-16">
         <form
           onSubmit={(e) => {
             e.preventDefault();
             handleCalcular();
           }}
-          className="flex flex-col gap-4 w-full md:w-1/3 min-h-[60vh]"
+          className="flex flex-col gap-4 w-full lg:w-1/3 min-h-[60vh]"
         >
           <div className="w-full">
             <Label htmlFor="principal">Valor inicial: </Label>
@@ -153,8 +153,8 @@ export default function JurosSimples() {
             />
           </div>
 
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="w-full md:w-2/3">
+          <div className="flex flex-col lg:flex-row gap-4">
+            <div className="w-full lg:w-2/3">
               <Label htmlFor="taxa">Taxa de juros: </Label>
               <Input
                 id="taxa"
@@ -163,7 +163,7 @@ export default function JurosSimples() {
                 onChange={(e) => setTaxa(e.target.value)}
               />
             </div>
-            <div className="w-full md:w-1/3">
+            <div className="w-full lg:w-1/3">
               <Label htmlFor="tipoTaxa">Tipo de taxa: </Label>
               <Select
                 value={tipoTaxa}
@@ -180,8 +180,8 @@ export default function JurosSimples() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="w-full md:w-2/3">
+          <div className="flex flex-col lg:flex-row gap-4">
+            <div className="w-full lg:w-2/3">
               <Label htmlFor="tempo">Tempo: </Label>
               <Input
                 id="tempo"
@@ -191,7 +191,7 @@ export default function JurosSimples() {
                 onChange={(e) => setTempo(e.target.value)}
               />
             </div>
-            <div className="w-full md:w-1/3">
+            <div className="w-full lg:w-1/3">
               <Label htmlFor="periodoTempo">Período de tempo: </Label>
               <Select
                 value={periodoTempo}
@@ -210,7 +210,7 @@ export default function JurosSimples() {
 
           <Button type="submit">Calcular</Button>
 
-          <div className="flex flex-col gap-6 justify-start items-start md:mt-[5rem]">
+          <div className="flex flex-col gap-6 justify-start items-start lg:mt-[5rem]">
             {valorTotal === "0" ? (
               <p className="text-xl font-bold">Valor total: R$ 00,00</p>
             ) : (
@@ -237,7 +237,7 @@ export default function JurosSimples() {
           </div>
         </form>
 
-        <div className="w-full md:w-2/4 h-[60vh]">
+        <div className="w-full lg:w-2/4 h-[60vh]">
           <Line data={dados} options={options} />
         </div>
       </div>
